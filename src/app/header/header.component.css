@@ -1,0 +1,184 @@
+header {
+    margin-top: 10px;
+    width: 100%;
+    background-color: white;
+}
+
+header:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#logo {
+    width: 264px;
+    height: 120px;
+    float: left;
+    margin-left: 10px;
+}
+
+#slogan {
+    height: 120px;
+    float: right;
+    margin-right: 10px;
+}
+
+#slogan h1 {
+    font-family: 'Roboto Slab', 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
+    font-weight: bolder;
+}
+
+#slogan h2 {
+    font-family: serif;
+    font-weight: 300;
+}
+
+nav {
+    margin-bottom: 10px;
+    background-color: white;
+    position: relative;
+}
+
+.toggle_menu {
+    display: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    margin: 0;
+    padding: 0px 20px;
+    line-height: 48px;
+    font-size: 16px;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-weight: bolder;
+}
+
+nav a:link {
+    color: black;
+}
+
+nav a:visited {
+    color: black;
+}
+
+nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+nav a:active {
+    color: black;
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid black;
+    margin: 0 auto;
+}
+
+.submenu {
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+    display: none;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    background-color: #F4F4F4;
+}
+
+.submenu>li {
+    display: block;
+    margin: 0 auto;
+}
+
+.submenu>li>a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    padding: 0;
+    text-align: center;
+}
+
+.submenu>li>a:hover {
+    color: white;
+}
+
+nav>ul>li:hover>ul.submenu {
+    display: block;
+}
+
+@media all and (max-width: 640px) {
+    #logo {
+        float: none;
+        margin: 5px auto;
+    }
+    #slogan {
+        display: none;
+        float: none;
+        margin: 5px auto;
+        text-align: center;
+    }
+    nav>ul {
+        display: none;
+    }
+    .toggle_menu {
+        display: inline-block;
+        box-sizing: border-box;
+        height: 30px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        font-size: 24px;
+        padding-left: 10px;
+    }
+    .menu {
+        background-color: black;
+    }
+    .menu a {
+        font-weight: lighter;
+    }
+    .menu a:link {
+        color: white;
+    }
+    .menu a:visited {
+        color: white;
+    }
+    .menu a:hover {
+        background-color: white;
+        color: black;
+    }
+    .submenu {
+        background-color: black;
+    }
+    .submenu a {
+        font-weight: lighter;
+    }
+    .submenu>li>a {
+        color: white;
+    }
+    .submenu>li>a:hover {
+        color: black;
+    }
+    .caret {
+        border-top: 3px solid white;
+        margin-left: 20px;
+    }
+    nav li {
+        display: block;
+    }
+}

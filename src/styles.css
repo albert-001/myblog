@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    width: 90%;
+    margin: auto;
+    background-color: rgb(229, 234, 237);
+    font-family: sans-serif;
+    border: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+img,
+header,
+footer,
+article {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 18px;
+}
