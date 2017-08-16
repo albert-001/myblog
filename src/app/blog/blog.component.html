@@ -2,9 +2,9 @@
     <div id="content">
         <app-onearticle *ngFor="let article of articles" [article]="article"></app-onearticle>
         <div id="pager">
-            <a href="javascript:void(0);" id="prev_page" style="display: none;">&lt;</a>
-            <span id="curr_page">1/2</span>
-            <a href="javascript:void(0);" id="next_page" style="display: inline-block;">&gt;</a>
+            <a (click)="pageDecr()" id="prev_page" *ngIf="page!=1">&lt;</a>
+            <span id="curr_page">{{page}}/{{totalPages}}</span>
+            <a (click)="pageIncr()" id="next_page" *ngIf="page!=totalPages">&gt;</a>
         </div>
     </div>
     <aside>
@@ -12,8 +12,11 @@
             <h3>最新动态</h3>
             <hr>
             <ul>
-                <li>2016-06-26 搭建开发环境，创建html</li>
+                <li>2017-07-31 增加Router</li>
+                <li>2017-07-30 发布到Github Pages</li>
+                <li>2017-07-28 前端移植到Angular</li>
                 <li>2016-06-26 制作网站logo，增加样式</li>
+                <li>2016-06-26 搭建开发环境，创建html</li>
             </ul>
         </div>
         <div class="ads" id="links">

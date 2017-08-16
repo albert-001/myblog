@@ -9,7 +9,7 @@ export class HttpServiceService {
   constructor() { }
 
   public extractData(res: Response) {
-    let data = res.json();
+    const data = res.json();
     return data;
   }
 

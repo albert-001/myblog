@@ -9,11 +9,21 @@ import { ArticleService } from '../services/article.service';
 })
 export class BlogComponent implements OnInit {
   articles : Article[];
+  page : number = 1;
+  totalPages: number = 2;
 
   constructor(private articleService:ArticleService) { }
 
   ngOnInit() {
-    this.articles = this.articleService.getArticles();
+    this.getArticles(this.page);
+  }
+
+  pageIncr() { this.page+=1; this.getArticles(this.page); }
+
+  pageDecr() { this.page-=1; this.getArticles(this.page); }
+
+  getArticles(pageNum: number) {
+    this.articleService.getArticles(pageNum).subscribe(res => this.articles = res);
   }
 
 }

@@ -1,16 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { OnearticleComponent } from './onearticle/onearticle.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { AboutComponent } from './about/about.component'
-import { BlogComponent } from './blog/blog.component'
+import { AboutComponent } from './about/about.component';
+import { BlogComponent } from './blog/blog.component';
 
 import { ArticleService } from './services/article.service';
+import { HttpServiceService } from './services/http-service.service';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { ArticleComponent } from './article/article.component';
+
+import { serverURL } from './shared/server';
 
 @NgModule({
   declarations: [
@@ -19,13 +23,19 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     HeaderComponent,
     FooterComponent,
     AboutComponent,
-    BlogComponent
+    BlogComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [ArticleService],
+  providers: [
+    ArticleService,
+    {provide: 'ServerURL', useValue: serverURL},
+    HttpServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

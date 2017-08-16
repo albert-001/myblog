@@ -1,5 +1,6 @@
 export class Article {
-    header: string;
-    meta: string;
+    id: number;
+    title: string;
+    date: string;
     content: string;
 }

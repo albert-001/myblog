@@ -1,1 +1,1 @@
-export const serverURL = 'http://haohu.pythonanywhere.com/blog/';
+export const serverURL = 'https://haohu.pythonanywhere.com/blog/';
