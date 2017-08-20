@@ -3,9 +3,7 @@
         <h1 class="blog_header">{{ article.title }}</h1>
         <div class="blog_meta">{{ article.date | date }}</div>
     </header>
-    <p class="blog_content">
-        {{ article.content | slice:0:200 }}
-        <span *ngIf="article.content.length>200">...</span>
-    </p>
-    <footer><a [routerLink]="['/articles', article.id]">更多</a></footer>
+    <pre>{{ article.content | slice:0:200 }}<span *ngIf="article.content.length>200"><a [routerLink]="['/articles', article.id]"> ...</a></span>
+    </pre>
+    <footer></footer>
 </article>

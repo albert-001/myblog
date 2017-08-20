@@ -1,0 +1,12 @@
+h1.blog_header {
+    text-align: center;
+}
+
+div.blog_meta {
+    padding: 5px 0px;
+}
+
+pre {
+    white-space: pre-wrap;
+    font-size: 20px; 
+}

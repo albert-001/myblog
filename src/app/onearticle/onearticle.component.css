@@ -22,9 +22,11 @@ div.blog_meta {
     padding: 5px 10px;
 }
 
-article>p {
+article>pre {
     padding: 5px 10px;
     min-height: 150px;
+    white-space: pre-wrap;
+    /* font-size: 20px;  */
 }
 
 article>footer {

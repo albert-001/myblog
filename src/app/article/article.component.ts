@@ -19,7 +19,7 @@ export class ArticleComponent implements OnInit {
               private location: Location) { }
 
   ngOnInit() {
-    let id = +this.route.snapshot.params['id'];
+    const id = +this.route.snapshot.params['id'];
     this.articleservice.getArticle(id).subscribe(res => this.article = res);
   }
 

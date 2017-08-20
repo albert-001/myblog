@@ -3,8 +3,6 @@
         <h1 class="blog_header">{{ article.title }}</h1>
         <div class="blog_meta">{{ article.date | date }}</div>
     </header>
-    <p class="blog_content">
-        {{ article.content}}
-    </p>
+    <pre>{{ article.content }}</pre>
 </article>
-<a routerLink="/home">back</a>
+<a routerLink="/home"><= Back</a>
