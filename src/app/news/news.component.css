@@ -1,0 +1,15 @@
+.ads {
+    box-shadow: 2px 2px 1px #888888;
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+}
+
+.ads>ul {
+    padding: 5px;
+    margin: 10px;
+}
+
+.ads>ul>li {
+    list-style-type: none;
+}
