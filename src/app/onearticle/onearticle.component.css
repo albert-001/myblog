@@ -44,7 +44,7 @@ article>footer>a {
     float: right;
 }
 
-@media all and (max-width: 640px) {
+@media all and (max-width: 800px) {
     article {
         width: 100%;
         margin: 5px auto;

@@ -10,7 +10,7 @@
     margin: 10px;
 }
 
-@media all and (max-width: 640px) {
+@media all and (max-width: 800px) {
     .ads ul li {
         display: inline-block;
         margin-right: 10px;
