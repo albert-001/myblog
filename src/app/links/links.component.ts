@@ -17,7 +17,7 @@ export class LinksComponent implements OnInit {
   }
 
   getLinks() {
-    this.links = this.linkService.getLinks();
+    this.linkService.getLinks().subscribe(res => {this.links = res;});
   }
 
 }
