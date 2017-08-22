@@ -1,7 +1,7 @@
 <article>
     <header>
         <h1 class="blog_header">{{ article.title }}</h1>
-        <div class="blog_meta">{{ article.date | date }}</div>
+        <div class="blog_meta">{{ article.date | date:'yyyy-MM-dd' }}</div>
     </header>
     <pre>{{ article.content | slice:0:200 }}<span *ngIf="article.content.length>200"><a [routerLink]="['/articles', article.id]"> ...</a></span>
     </pre>
